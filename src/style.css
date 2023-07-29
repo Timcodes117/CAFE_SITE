@@ -1,0 +1,655 @@
+body{
+    margin: 0%;
+    min-height: 100vh;
+    width: 100%;
+    /* background: rgb(220, 220, 222); */
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    background: black;
+    height: 5px;
+    border: none;
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    border-radius: 50px;
+    background: whitesmoke;
+}
+
+::selection{
+    background: black;
+    color: white;
+}
+
+::marker{
+    color: red;
+    background: red;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: logo;
+    src: url(assets/fonts/Game\ Of\ Squids.ttf);
+}
+
+*{
+    font-family: poppins;
+    --bg: url(assets/images/img\(2\).jpg);
+    --dark: #0b0f13;
+    outline: none;
+    /* border: 1px solid red; */
+    margin-right: 0 !important; 
+}
+
+.Hero-content{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    min-height: 800px !important;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border-radius: 10px; */
+    /* transform: rotate(383deg); */
+    background-position: bottom;
+    /* margin-top: -310px; */
+    flex-direction: row;
+}
+
+    /* color: white; */
+header{
+    width: 98%;
+    position: absolute;
+    display: flex;
+    z-index: 99;
+    /* background: white; */
+    align-items: center;
+    top: 0px;
+    height: 70px;
+}
+
+.lft{
+    display: flex;
+    min-height: 100%;
+    /* background: white; */
+    flex: 60;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 450px;
+}
+
+.rht{
+    display: flex;
+    height: 100%;
+    background: #000000ea;
+    flex: 40;
+    align-items: center;
+    height: 100%;
+}
+
+.img{
+    width: 500px;
+    height: 85vh;
+    min-height: 500px;
+    background: gray;
+    margin-left: -100px;
+    background: var(--bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: center;
+    
+}
+
+.button{
+    width: 250px;
+    height: 50px;
+    background: black;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    margin-left: 40px;
+    align-items: center;
+}
+
+.mabld{
+    margin-left: 40px;
+}
+
+.ab{
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    /* border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; */
+}
+
+.inner-button{
+    display: flex;
+    width: 60px;
+    height: 50px;
+    /* flex-direction: row; */
+    background: #ffffff15;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.button :hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.scrollIndicator{
+    display: flex;
+    min-height: 40px;
+    width: 150px;
+    border: 1px solid grey;
+    justify-self: flex-end;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: grey;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.mds{
+    margin-left: 40px;
+}
+
+.contents{
+    width: 100%;
+    height: fit-content;
+    min-height: 500vh;
+}
+
+.nav-bars{
+    width: 30%;
+    display: flex;
+    position: absolute;
+    right: 45px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ a{
+    text-decoration: none;
+    font-size: 12px;
+    color: white ;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 15px !important;
+    color: rgb(83, 83, 83);
+}
+.product-section{
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    
+}
+
+.product-view{
+    width: 90%;
+    max-width: 300px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid grey; */
+}
+
+.product-view .thumbnail{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    overflow: hidden;
+    /* margin-top: 5px; */
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.proSec{
+    font-size: 30px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.proSec::after{
+    content: '';
+    width: 50%;
+    min-width: 150px;
+    height: 1px;
+    background: gray;
+    position: absolute;
+    top: 20px;
+    left: 140px;
+}
+
+.cfd{
+    font-size: 30px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.cfd::after{
+    content: '';
+    width: 50%;
+    min-width: 150px;
+    height: 1px;
+    background: gray;
+    position: absolute;
+    top: 20px;
+    left: 180px;
+}
+.barTrigger{
+    display: none;
+}
+
+.nav-bars :hover{
+    opacity: 0.5px;;
+    cursor: pointer;
+}
+header :hover{
+    opacity: 0.5px;;
+    cursor: pointer;
+}
+
+.social-icons{
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+
+.controls{
+    width: calc(fit-content + 100px);
+    min-width: 90px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 10px;
+}
+
+.section{
+    min-width: 100% !important;
+    min-height: 50vh !important;
+    display: flex;
+    margin-right: 0px!important;
+}
+
+.sl{
+    display: flex;
+    flex: 40;
+    /* background: url(assets/images/shot-of-coffee-beans-and-a-cup-of-black-coffee-on-a-wooden-table.jpg) !important; */
+    /* align-items: center;
+    justify-content: center; */
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: top;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+.sr{
+    display: flex;
+    flex: 60;
+    flex-direction: column;
+    /* overflow-y: hidden; */
+    /* overflow: scroll; */
+    font-size: 15px;
+    min-height: 100% !important;
+    
+}
+
+.abtus{
+    position: relative;
+    margin-top: 10px;
+}
+
+.abtus::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background: gray;
+    margin-left: 15px;
+    left: 10;
+    top: 1.5rem;
+    
+}
+
+.services{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+.serView{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow-x: scroll;
+}
+.serViewContent{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    min-width: 100%;
+    /* min-height: 80vh; */
+    background: black;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.serViewImg{
+    display: flex;
+    /* flex: 45; */
+    width: 100%;
+    min-width: 400px;
+    min-height: 100%;
+    /* background: url(assets/images/img\(5\).jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    margin-right: 20px;
+    /* max-width: 400px; */
+    max-width: 500px;
+    
+}
+
+.serViewDetails{
+    color: ghostwhite;
+    display: flex;
+    /* flex: 55; */
+    min-height: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0), #ffffff07, #ffffff07,#ffffff07);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    text-align: left;
+    position: absolute;
+}
+
+
+.contactForm{
+    min-height: 90vh;
+    
+}
+
+.contact{
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.SocialContact{
+    display: flex;
+    flex: 40;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+    font-size: 50px;
+    justify-content: space-evenly;
+}
+
+.FormContact{
+    display: flex;
+    flex: 60;
+    min-height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.SocialContact::after{
+    content: '';
+    border-left: 1px solid gray;
+    height: 100px;
+    width: 1px;
+    position: absolute;
+    margin-left: 500px;
+    background: gray;
+}
+
+.cu{
+    margin-right: 50px !important;
+}
+
+form{
+    margin-right: 200px !important;
+    width: 100%;
+    max-width: 450px;
+}
+
+form input{
+    width: 100%;
+    min-height: 100%;
+    border: none;
+    background: none;
+    color: grey;
+}
+
+textarea{
+    background: none;
+    border: none;
+    width: 100%;
+    resize: none;
+    color: grey;
+}
+
+
+fieldset{
+    min-height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: none;
+}
+
+button{
+    width: 100%;
+   min-height: 60px;
+    border: none;
+    background: dodgerblue;
+    margin-top: 15px;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+footer{
+    height: 60vh;
+    width: 100%;
+    border-top: 0.1px solid rgb(166, 166, 166);
+}
+
+.footcont{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    /* border: 2px solid red ; */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sm{
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.smcnt{
+    width: 50px;
+    height: 50px;
+    background: rgb(58, 58, 58);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.smcnt:hover{
+    background: black;
+}
+
+@media screen and (max-width: 990px){
+    .contact{
+        flex-direction: column-reverse;
+    }
+
+    form{
+        margin-right: 0 !important;
+    }
+
+    .SocialContact{
+        flex-direction: row;
+        font-size: 25px !important;
+    }
+
+    .SocialContact::after{
+        display: none;
+    }
+
+    form{
+        margin-right: 0;
+        width: 90%;
+    }
+
+    .FormContact{
+        justify-content: center;
+    }
+    .button{
+        width: 200px;
+    }
+    
+    .mabld{
+        font-size: 40px !important;
+        font-weight: 700;
+    }
+    
+    .sl{
+        background-position: center;
+        min-height: 300px;
+        width: 100% !important;
+        max-height: 200px;
+        background-repeat: no-repeat !important;
+    }
+
+    .sr{
+        /* height: fit-content !important; */
+        min-height: 100% !important;
+        font-size: 12px;
+    }
+    
+    
+    .section{
+        flex-direction: column !important;
+        min-height: 80vh !important;
+        /* font-size: 10px !important; */
+    }
+
+    .img{
+        transform: rotate(50deg);
+        margin-top: -85vh;
+        transition: 2s;
+        /* width: 90%; */
+    }
+    
+    .nav-bars a{
+        display: none;
+    }
+    
+    .nav-bars{
+        flex-direction: row-reverse;
+    }
+
+    .nav-bars label {
+        margin-left: 20px;
+    }
+
+    .barTrigger{
+        display: block;
+    }
+
+    .nav-bars{
+        display: flex;
+        position: fixed;
+        background: black;
+        width: 100%;
+        height: 90vh;
+        transition: 1.5s;
+        border-top-left-radius: 10px;
+        margin-right: 0;
+        border-top-right-radius: 10px;
+        bottom: 0px;
+        align-self: center;
+        flex-direction: column-reverse;
+        color: gainsboro !important;
+        right: 0;
+    }
+
+    .product-section{
+        flex-direction: column !important;
+    }
+
+    .mabld{
+        margin-left: 15px;
+    }
+    .mds{
+        margin-left: 15px;
+    }
+
+    .social-icons{
+        margin-left: 15px;
+    }
+
+    .scrollIndicator{
+        margin-left: 15px;
+    }
+
+    .button{
+        margin-left: 15px;
+    }
+}
